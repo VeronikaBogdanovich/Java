@@ -1,0 +1,23 @@
+import com.bsu.bogdasha.fileWorking.FileWorking;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+
+class Run {
+
+    private static final String FILE_PATH = "/Users/veronikabogdanovich/Documents/Java/lab9/src/com/bsu/bogdasha/veron.txt";
+
+    private static void main(String[] args) {
+
+        File file = new File(FILE_PATH);
+
+        FileWorking fileWorking = new FileWorking(file);
+
+        try {
+            fileWorking.replaceInFile("private", "private");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+}
